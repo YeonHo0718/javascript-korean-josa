@@ -8,19 +8,19 @@ const JOSA = require(PATH);
 ```
 
 ### Functions
-**`yiGa(string: String)`**  (이/가) 를 구분합니다.  
-**`unNun(string: String)`**  (은/는) 을 구분합니다.  
-**`ulRul(string: String)`**  (을/를) 을 구분합니다.  
-**`waGwa(string: String)`**  (와/과) 를 구분합니다.  
-**`aYa(string: String)`**  (아/야) 를 구분합니다.  
-**`yi(string: String)`**  (이) 를 구분합니다.
+**`String.prototype.yiGa()`**  (이/가) 를 구분합니다.  
+**`String.prototype.unNun()`**  (은/는) 을 구분합니다.  
+**`String.prototype.ulRul()`**  (을/를) 을 구분합니다.  
+**`String.prototype.waGwa()`**  (와/과) 를 구분합니다.  
+**`String.prototype.aYa()`**  (아/야) 를 구분합니다.  
+**`String.prototype.yi()`**  (이) 를 구분합니다.
 
 ### Example
 ```javascript
 const JOSA = require("josa");
 
 function sayHello(name){
-    return JOSA.aYa(name)+" 안녕!";
+    return name.aYa()+" 안녕!";
 }
 //sayHello("춘식")
 //result: 춘식아 안녕!
@@ -28,7 +28,7 @@ function sayHello(name){
 //result: 사과야 안녕!
 
 function useItem(itemName){
-    return JOSA.ulRul(itemName)+" 사용했습니다.";
+    return itemName.ulRul()+" 사용했습니다.";
 }
 //useItem("HP물약")
 //result: HP물약을 사용했습니다.
